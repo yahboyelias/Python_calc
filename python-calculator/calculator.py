@@ -1,53 +1,52 @@
 import math
 
-
 def add(x, y):
+    """Add two numbers."""
     return x + y
 
-
 def subtract(x, y):
+    """Subtract y from x."""
     return x - y
 
-
 def multiply(x, y):
+    """Multiply two numbers."""
     return x * y
 
-
 def divide(x, y):
+    """Divide x by y, handling division by zero."""
     if y == 0:
         return "Cannot divide by zero"
     return x / y
 
-
 def square_root(x):
+    """Calculate the square root of x."""
     if x < 0:
         return "Invalid input"
     return math.sqrt(x)
 
-
 def power(x, y):
+    """Calculate x raised to the power of y."""
     return x ** y
 
-
 def factorial(x):
+    """Calculate the factorial of x."""
     if x < 0:
         return "Invalid input"
     if x == 0:
         return 1
     return math.factorial(x)
 
-
 def calculate_average(numbers):
+    """Calculate the average of a list of numbers."""
     if len(numbers) == 0:
         return "List is empty"
     return sum(numbers) / len(numbers)
 
-
 def calculate_percentage(x, y):
+    """Calculate the percentage of y relative to x."""
     if y == 0:
         return "Cannot calculate percentage with denominator zero"
     return (x / y) * 100
-
 
 while True:
     print("Options:")
@@ -97,7 +96,7 @@ while True:
                 num_list.append(float(num))
             except ValueError:
                 print("Invalid input. Please enter a valid number.")
-
+        
         if user_input == "average":
             print("Result: " + str(calculate_average(num_list)))
         elif user_input == "percentage":
